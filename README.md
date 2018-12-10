@@ -15,7 +15,7 @@ More details in the [Slides](https://hackmd.io/p/SkpBR-Yam#/)
 
 #### Install Dependency
 ```sh
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 * pygraphviz (For visualizing Finite State Machine)
