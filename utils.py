@@ -1,8 +1,8 @@
+import os
 import requests
 
-
 GRAPH_URL = "https://graph.facebook.com/v2.6"
-ACCESS_TOKEN = "Your Page Access Token"
+ACCESS_TOKEN = os.environ.get('ACCESS_TOKEN')
 
 
 def send_text_message(id, text):

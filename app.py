@@ -1,9 +1,11 @@
+import os
+
 from bottle import route, run, request, abort, static_file
 
 from fsm import TocMachine
 
-
-VERIFY_TOKEN = "Your Webhook Verify Token"
+PORT = os.environ.get('PORT', '5000')
+VERIFY_TOKEN = os.environ.get('VERIFY_TOKEN', '1234567890987654321')
 machine = TocMachine(
     states=[
         'user',
@@ -72,4 +74,4 @@ def show_fsm():
 
 
 if __name__ == "__main__":
-    run(host="localhost", port=5000, debug=True, reloader=True)
+    run(host="localhost", port=PORT, debug=True, reloader=True)
