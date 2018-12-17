@@ -74,4 +74,4 @@ def show_fsm():
 
 
 if __name__ == "__main__":
-    run(host="localhost", port=PORT, debug=True, reloader=True)
+    run(host="0.0.0.0", port=PORT, debug=True, reloader=True)
