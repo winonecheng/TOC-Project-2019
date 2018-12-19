@@ -11,13 +11,13 @@ class TocMachine(GraphMachine):
         )
 
     def is_going_to_state1(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get('text'):
             text = event['message']['text']
             return text.lower() == 'go to state1'
         return False
 
     def is_going_to_state2(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get('text'):
             text = event['message']['text']
             return text.lower() == 'go to state2'
         return False
